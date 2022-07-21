@@ -1,0 +1,22 @@
+.hclass{
+    text-align: center;
+    text-shadow: 2px 2px 1px pink; 
+    background-color: aquamarine;
+    
+}
+div{
+    text-align: center;
+}
+#para1{
+    color: rgb(32, 74, 223);
+    font-size: 3vh /* 1vh= 1/100 of windo height */;
+}
+#para2{
+    font-family: monospace; /*every letter takes same width*/
+    /* By default font= serif */
+}
+#para3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}

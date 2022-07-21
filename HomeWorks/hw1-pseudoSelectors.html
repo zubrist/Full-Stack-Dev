@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home work 1</title>
+
+<style>
+    div{
+        background-color: rgba(127, 255, 212, 0.319);
+        padding: 10px;
+    }
+    div a{
+        color: rgb(249, 21, 21);
+        text-decoration: none;
+        display:inline-block;
+        padding: 5px;
+    }
+
+    ol{
+        display: inline-block;
+    }
+   ol li ul{
+    display: none;
+    position: relative;
+   }
+   ol li:hover ul{
+    display: flow-root;
+    background: rgba(0, 0, 0, 0.604);
+    color: lightgreen;
+   }
+  
+   ol li ul:hover li{
+    display: flow-root;
+   }
+   ol li ul li ul li{
+    display: none;
+   }
+   ol li ul li ul:hover li{
+    display: block;
+    position: relative;
+   }
+</style>
+</head>
+<body>
+    <div>
+        <ol style="text-decoration: wavy;">
+        <li><a href="#">one</a>  </li>
+        <li> <a href="#">two</a> 
+            <ul>
+                <li><a href="#">two.one</a></li>
+                <li> <a href="#">two.two</a> </li>
+            </ul>
+        </li>
+        <li><a href="#">three</a>
+        <ul>
+            <li><a href="#">three.one</a></li>
+            <li><a href="#">three.two</a>
+            <ul>
+                <li><a href="#">three.two.one</a></li>
+                <li><a href="#">three.two.two</a></li>
+            </ul>
+            </li>
+        </ul>
+        </li>
+    </ol>
+    </div>
+</body>
+</html>

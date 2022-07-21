@@ -1,0 +1,22 @@
+*{
+    background-color: lightcoral;
+}
+#d1{
+    background-color: lightcyan;
+}
+.c1{
+    background-color: lightgreen;
+}
+#cd1{
+    background-color: lightsalmon;
+    /* id takes precidence  over the class */
+}
+.dc1{
+    background-color: lightskyblue;
+    /* no change as class cant take presidence over Id */
+}
+#d1{
+    background-color:lightseagreen;
+    /* If same propertie(s) is/are repeated then the last
+    value will gate presidence.  */
+}

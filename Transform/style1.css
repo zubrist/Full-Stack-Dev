@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(204, 240, 132);
+}
+
+div{
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    margin-left: 100px;
+    color: rgb(0, 0, 0);
+}
+.d1{
+    background-color: aqua;
+    transform: scale(1.5, 0.5)
+}
+.d2{
+    background-color: brown;
+    transform: rotateX(120deg)
+}
+.d3{
+    background-color: blue;
+    transform: translateX(50px) translateY(20px);
+}
+.d4{
+    background-color: tomato;
+    transform: rotate(45deg) translateX(100px) translateY(-100px);
+
+}
+.d5{
+    margin-left: 100pt;
+    background-color: yellow;
+    transform: skewX(45deg) skewY(45deg);
+}
