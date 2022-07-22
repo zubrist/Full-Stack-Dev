@@ -1,0 +1,176 @@
+body{
+    background-color: rgb(95, 105, 114);
+}
+h3{
+    color: rgb(113, 234, 21);
+    text-align: center;
+    
+}
+h2{
+    color: aliceblue;
+    font-family: monospace;
+    padding-left: 20px;
+    display: inline;
+}
+span{
+    font-size: 30px;
+}
+.rating{
+    padding-left: 20px;
+}
+.star{
+    font-size: 1.143rem;
+    
+}
+*, :after,:before{
+    box-sizing: inherit;
+}
+.outerBox{
+    width: 1200px;
+    height: 5000px;
+    
+    border: solid black 1px;
+    background-color: rgb(109, 123, 119);
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    align-items: center;
+
+    align-content: flex-start;
+    
+}
+.innerBox{
+    width: 390px;
+    height: 500px;
+    overflow: hidden;
+    margin: auto;
+    background-color: beige;
+    border: solid black 1px;
+    
+    
+}
+div.innerBox.one{
+    border-radius: 30px;
+    margin-top: 10px;
+    position: relative;    
+    
+}
+div.innerBox.two{
+    border-radius: 30px;
+    margin-top: 10px;
+    position: relative;    
+}
+#oneupper{
+    width: 390px;;
+    height: 220px;
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    background-color: rgb(8, 239, 162);   
+    position: relative;
+    
+}
+.card-mentor{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding-top: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.card-mentor-image{
+    position: relative;
+    float: left;
+    
+    
+}
+
+
+.no-gutters {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.justify-content-between {
+    -webkit-box-pack: justify!important;
+    justify-content: space-between!important;
+}
+.align-items-center {
+    -webkit-box-align: center!important;
+    align-items: center!important;
+}
+.row{
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 29px;
+    margin-left: 29px;
+    padding-top: 5px;
+
+}
+.gradient-text-orange {
+    
+    background-image: linear-gradient(90deg,#e74e4b,#fb8133);
+}
+
+.gradient-text{
+
+  background: -webkit-linear-gradient(#e74e4b,#fb8133);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700!important; 
+  font-size: 1.143rem!important;
+}
+.button-solid{
+    font-weight: 700;
+    display: inline-block;
+    
+    
+}
+.button-orange{
+    background-image: linear-gradient(90deg,#e74e4b,#fb8133,#e74e4b);
+
+}
+.divider{
+    width: 100%;
+    height: 2px;
+    padding-top: 10px;
+    color:#3e3c3c;
+}
+.demo{
+    display: flex!important;
+    padding-left: 20px;
+    padding-top: 30px;
+    
+}
+
+div.innerBox.two{
+    border-radius: 30px;
+    margin-top: 10px;
+}div.innerBox.three{
+    border-radius: 30px;
+    margin-top: 10px;
+}div.innerBox.four{
+    border-radius: 30px;
+    margin-top: 10px;
+}div.innerBox.five{
+    border-radius: 30px;
+    margin-top: 10px;
+}div.innerBox.six{
+    border-radius: 30px;
+    margin-top: 10px;
+}div.innerBox.seven{
+    border-radius: 30px;
+    margin-top: 10px;
+}div.innerBox.eight{
+    border-radius: 30px;
+    margin-top: 10px;
+}div.innerBox.nine{
+    border-radius: 30px;
+    margin-top: 10px;
+}div.innerBox.ten{
+    border-radius: 30px;
+    margin-top: 10px;
+}
