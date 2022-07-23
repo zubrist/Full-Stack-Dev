@@ -9,8 +9,10 @@ h3{
 h2{
     color: aliceblue;
     font-family: monospace;
+     
     padding-left: 20px;
     display: inline;
+    
 }
 span{
     font-size: 30px;
@@ -63,6 +65,21 @@ div.innerBox.two{
     border-radius: 30px;
     margin-top: 10px;
     position: relative;    
+}
+div.innerBox.eleven{
+    border-radius: 30px;
+    margin-top: 10px;
+      
+}
+div.innerBox.twelve{
+    border-radius: 30px;
+    margin-top: 10px;
+      
+}
+div.innerBox.thirteen{
+    border-radius: 30px;
+    margin-top: 10px;
+      
 }
 #oneupper{
     width: 390px;;
@@ -144,6 +161,22 @@ div.innerBox.two{
     padding-left: 20px;
     padding-top: 30px;
     
+}
+
+@media (min-width:400px){
+    .outerBox{
+        max-width: 400px;
+    }
+}
+@media (min-width:800px){
+    .outerBox{
+        max-width: 800px;
+    }
+}
+@media (min-width:1200px){
+    .outerBox{
+        max-width: 1200px;
+    }
 }
 
 div.innerBox.two{
