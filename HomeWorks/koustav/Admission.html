@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission</title>
+    <style>
+        h3{
+            color: green;
+            text-align: center;
+            font-size: 40px;
+        }
+        hr{
+            height: 4px;
+            
+        }
+        .box{
+            text-align: center;
+            margin-top: 40px;
+            border: solid black 2px;
+            padding-top: 10px;
+            padding-bottom: 100px;
+        }
+        .dept{
+            padding-right: 20px;
+        }
+        .course{
+            padding-left: 40px;
+        }
+        .container{
+            padding-right: 20px;
+        }
+        .address{
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h3>Admission Portal</h3>
+    <hr>
+    <div class="infor">
+        <span>Admission related information goes here...</span>
+    </div>
+    <div class="box">
+        <form action="">
+
+            <label for="name" class="container">Name:</label><input type="text"><br><br>
+            <label for="email" class="container">Email:</label><input type="email" name="" id=""><br> <br>
+            <label for="phone" >phone no:</label><input type="number" name="" id=""><br> <br>
+            <label for="selection" class="dept container">Select Depertment:</label> 
+            <select  id="dept">
+                <option value="1">Arts</option>
+                <option value="2">Scinece</option>
+                <option value="3">Commerce</option>
+            </select> <br><br>
+            <label for="selection" class="course container">Select Course:</label> 
+            <select  id="course">
+                <option value="1">History</option>
+                <option value="2">English</option>
+                <option value="3">Bengali</option>
+                <option value="4">Geography</option>
+                <option value="5">Mathematics</option>
+                <option value="6">Physics</option>
+                <option value="7">Chemistry</option>
+                <option value="8">Computer Science</option>
+                <option value="9">Zoology</option>
+                <option value="10">Economics</option>
+                <option value="11">Auditing</option>
+                <option value="12">Taxation</option>
+                <option value="14">Banking and Insurance</option>
+
+
+
+
+            </select> <br><br>
+            <div><label for="address" class="address">Address: </label><textarea type="text"> </textarea></div>
+            
+            <br><br>
+            <button type="submit">Submit</button>
+        </form>        
+    </div>
+</body>
+</html>
