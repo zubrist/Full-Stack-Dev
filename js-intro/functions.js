@@ -16,3 +16,10 @@ function area(height, width){
     }
     return height*width
 }
+function hello(){
+
+    console.log('Hello World  ' + arguments[0] +arguments[1])
+}
+
+hello(1,2)
+hello('Ahmed', 'Reja')
