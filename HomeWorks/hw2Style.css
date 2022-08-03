@@ -207,3 +207,6 @@ div.innerBox.two{
     border-radius: 30px;
     margin-top: 10px;
 }
+.outerBox:nth-child(2n){
+    background-color: lightcyan;
+}
