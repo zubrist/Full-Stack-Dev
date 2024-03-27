@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Specialties</title>
+    <script async defer src="script.js"></script>
+</head>
+<body>
+    <h3>
+        function outer(arg1){ <br>
+            let var1 = 10 <br>
+        
+            function inner(arg2){ <br>
+                let var2 = 20 <br>
+        
+                console.log(arg1,var1,arg2,var2) <br>
+            }
+            return inner; <br>
+        
+        }
+        let x = outer('param1') <br>
+        
+        x('param2') <br>
+    </h3>
+
+    <h2>
+        <h1 style="color: red;">Closure Function </h1>
+        Whenever a function is created all the scopes that are available  the birth place of the <br>
+        of the function are captured by the function and will be available till the function available the memory
+    </h2>
+</body>
+</html>

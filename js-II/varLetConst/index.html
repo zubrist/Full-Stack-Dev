@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>let vs var in JavaScript</title>
+<script src="varLetConst.js"></script>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: cadetblue;
+  }
+  h1 {
+    color: #333;
+  }
+  p {
+    color: #141313;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+<h1>let vs var in JavaScript</h1>
+<p>In JavaScript, both <code>let</code> and <code>var</code> are used for variable declaration, but they have some key differences:</p>
+<ul>
+  <li><strong>Similarities:</strong></li>
+  <ul>
+    <li>Both <code>let</code> and <code>var</code> are used to declare variables in JavaScript.</li>
+    <li>Both can be reassigned values.</li>
+  </ul>
+  <li><strong>Differences:</strong></li>
+  <ul>
+    <li><code>var</code> is function-scoped, meaning it is available throughout the function in which it is declared.</li>
+    <li><code>let</code> is block-scoped, meaning it is only available within the block (enclosed by curly braces) in which it is declared. This makes code more predictable and avoids potential scoping issues.</li>
+    <li>Variables declared with <code>var</code> are hoisted to the top of their function or global scope, which can sometimes lead to unexpected behavior if you use the variable before it's declared. <code>let</code> avoids this issue.</li>
+    <li>Variables declared with <code>let</code> are not hoisted, and trying to access them before they are declared will result in a `ReferenceError`.</li>
+  </ul>
+</ul>
+
+<h3>Example: Scoping with let vs var vs const</h3>
+<p>Here's an example to illustrate the difference in scoping between <code>let</code> and <code>var</code>:</p>
+
+<pre>
+function withVar() {
+  var x = 10;
+  if (true) {
+    var x = 20; // Re-declares x within the if block, but still accessible outside
+    console.log("Inside if:", x); // Output: 20
+  }
+  console.log("Outside if:", x); // Output: 20 (x is accessible throughout the function)
+}
+
+function withLet() {
+  let y = 10;
+  if (true) {
+    let y = 20; // Creates a new local variable y within the if block
+    console.log("Inside if:", y); // Output: 20
+  }
+  console.log("Outside if:", y); // Output: 10 (y declared with let is only accessible within the block)
+}
+
+function withConst() {
+    const PI = 3.14159;  // Constant value cannot be reassigned later
+    // PI = 3.14;  // This line will cause an error (attempt to reassign const)
+    if (true) {
+      // const PI = 3.14;  // This line will also cause an error (cannot redeclare const)
+      console.log("Inside if:", PI); // Output: 3.14159
+    }
+    console.log("Outside if:", PI); // Output: 3.14159 (PI remains constant)
+  }
+
+withVar();
+withLet();
+withConst();
+</pre>
+
+</body>
+</html>
