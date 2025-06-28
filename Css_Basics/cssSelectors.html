@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        /* type selectors */
+        p{
+            color: blue;
+            font-size: larger;
+        }
+        div{
+            color: chartreuse;
+            font-size: medium;
+        }
+
+        /* Class selectors*/
+        .bold{
+            font-weight: bold;
+        }
+        .italic{
+            font-style: italic;
+        }
+        .bolder{
+            font-weight: bolder;
+        }
+        /* id selectors */
+        #lighter{
+            font-weight: lighter;
+        }
+        #big{
+            font-size: 30pt;
+        }
+        /* Attrivute selector */
+        input[type="text"]{
+            width: 300pt;
+            height: 25pt;
+            font-family: cursive;
+        }
+
+    </style>
+</head>
+<body bgcolor="azure">
+    <h3>type Selectors </h3>
+    <p>This para is edited using type selectors</p>
+    <div>This division is edited using type selectors</div>
+
+    <h3>Class Selectors</h3>
+    <p class="bold">This para is edited using class selectors</p>
+    <p class="italic">This para is eedited using class selectors</p>
+    <div class="bold"> This division is eedited using class selectors</div>
+    <div class="italic"> This division is eedited using class selectors</div>
+    <div class="bolder italic ">this is a italic and bolder division</div>
+
+    <h3>Id Selectors</h3>
+    <p id="lighter">This para is edited using Id selectors</p>
+    <div id="big"> This division is eedited using Id selectors</div>
+    <h3>Attribute selectors</h3>
+    <input value="this input tag is edited using attribute selector" type="text">
+</body>
+</html>

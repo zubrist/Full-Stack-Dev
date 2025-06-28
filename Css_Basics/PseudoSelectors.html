@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selectors</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            background-color: rgb(203, 111, 0);
+            margin-left: 45%;
+        }
+        .box:hover{
+            width: 150px;
+            height: 150px;
+            font-weight: bold;
+            background-color: aquamarine;
+        }
+        .box:active{
+            background-color: chartreuse;
+            font-size: 30pt;
+        }
+        input:focus{
+            font-size: 15pt;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h3 style="text-align: center;">Pseudo Selectors</h3>
+
+    <div class="box"> Hello</div>
+<br>
+    <input type="text">
+
+
+</body>
+</html>

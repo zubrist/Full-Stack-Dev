@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding the "this" Keyword in JavaScript</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    ,<script src="script.js"></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F8F6E3;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1, h2, p {
+            text-align: center;
+        }
+        .info-box {
+            background-color: #FFEBB2;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: #7AA2E3;">Understanding the "this" Keyword in JavaScript</h1>
+        <div class="info-box">
+            <h2 style="color: #6AD4DD;">What is "this" in JavaScript?</h2>
+            <p>
+                In JavaScript, the <code>this</code> keyword refers to the context in which a function is executed. 
+                Its value is determined by how a function is called, and it can change dynamically.
+                The behavior of <code>this</code> can be a bit tricky and depends on several factors:
+            </p>
+            <ul>
+                <li>How a function is called (method, function, constructor, etc.)</li>
+                <li>Whether the function is called in strict mode or not</li>
+                <li>Whether the function is bound explicitly using methods like <code>bind()</code>, <code>call()</code>, or <code>apply()</code></li>
+            </ul>
+            <h2 style="color: #6AD4DD;">Examples:</h2>
+            <p>
+                <strong>Global Context:</strong> When used in the global scope or inside a function declared in the global scope, <code>this</code> refers to the global object (<code>window</code> in browsers, <code>global</code> in Node.js).
+            </p>
+            <pre><code>
+                console.log(this); // Output: Window {...} (in browser)
+            </code></pre>
+            <p style="text-align: left;">
+                <strong>Object Methods:</strong> When used inside a method of an object, <code>this</code> refers to the object itself.
+            </p>
+            <pre><code>
+                const person = {
+                    name: "John",
+                    greet: function() {
+                        console.log("Hello, my name is " + this.name);
+                    }
+                };
+                person.greet(); // Output: Hello, my name is John
+            </code></pre>
+            <!-- Add more examples as needed -->
+
+        </div>
+    </div>
+</body>
+</html>

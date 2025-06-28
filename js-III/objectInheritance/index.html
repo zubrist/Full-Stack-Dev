@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype-based Inheritance in JavaScript</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #35374B; /* Dark purple */
+            color: #fff; /* White text */
+            transition: background-color 0.3s, color 0.3s; /* Dynamic transition */
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            background-color: #344955; /* Dark teal */
+            transition: background-color 0.3s, box-shadow 0.3s; /* Dynamic transition */
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s; /* Dynamic transition */
+        }
+        .section:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Hover effect */
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #d3e4e9; /* Light teal */
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #78A083; /* Light green */
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #fff; /* White text */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prototype-based Inheritance in JavaScript</h1>
+        <div class="section" style="background-color: #50727B78"> <!-- Light teal with opacity -->
+            <h2>Introduction</h2>
+            <p>
+                Prototype-based inheritance is a fundamental concept in JavaScript. Unlike classical inheritance found in languages like Java or C++, 
+                JavaScript uses prototype-based inheritance, where objects inherit properties and methods directly from other objects.
+            </p>
+        </div>
+        <div class="section" style="background-color: #78A08378"> <!-- Light green with opacity -->
+            <h2>Example: Creating Objects with Prototypes</h2>
+            <p>
+                In JavaScript, every object has a prototype. You can create an object with a specific prototype using the <code>Object.create()</code> method.
+                Let's create a parent object and then create a child object that inherits from the parent:
+            </p>
+            <pre><code>
+                // Parent object
+                const personPrototype = {
+                    greet: function() {
+                        return 'Hello, ' + this.name + '!';
+                    }
+                };
+                
+                // Child object inheriting from parent
+                const john = Object.create(personPrototype);
+                john.name = 'John';
+                
+                console.log(john.greet()); // Output: Hello, John!
+            </code></pre>
+        </div>
+        <div class="section" style="background-color: #35374B78"> <!-- Dark purple with opacity -->
+            <h2>Understanding Prototype Chain</h2>
+            <p>
+                When you access a property or method on an object, JavaScript first checks if the object itself has that property or method.
+                If not found, it looks up the prototype chain until it finds the property or method or reaches the end of the chain (Object.prototype).
+            </p>
+            <p>
+                Let's demonstrate this with an example:
+            </p>
+            <pre><code>
+                // Parent object
+                const animal = {
+                    sound: function() {
+                        return 'Animal sound!';
+                    }
+                };
+                
+                // Child object inheriting from parent
+                const cat = Object.create(animal);
+                cat.sound = function() {
+                    return 'Meow!';
+                };
+                
+                console.log(cat.sound()); // Output: Meow!
+            </code></pre>
+        </div>
+        <p style="color: darkturquoise;">
+            For more detailed information on equality and sameness in JavaScript, 
+            refer to the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain" target="_blank">MDN documentation</a>.
+        </p>
+    </div>
+</body>
+</html>

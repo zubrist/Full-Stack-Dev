@@ -1,0 +1,25 @@
+body{
+    background-color: rgba(135, 174, 143, 0.432);
+}
+h3{
+    text-align: center;
+    font-family: monospace;
+    text-shadow: 1px 1px 2px rgb(44, 42, 42);
+    background-color: bisque;
+    padding: 3px;
+}
+#d1{
+    color: brown;
+    border: 2px solid rgb(152, 225, 225);
+}
+
+ul > li{
+    color: blue;
+}
+ol >li{
+    color: crimson;
+}
+
+ol+ul{
+    background-color: rgb(238, 171, 90);
+}

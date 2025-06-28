@@ -1,0 +1,32 @@
+.container{
+    height: auto;
+    width: 400px;
+    margin: 10px;
+    padding: 10px;
+    background-color: antiquewhite;
+}
+
+.item{
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    background-color: mediumaquamarine;
+    color: beige;
+}
+
+.container.one > .item.four{
+    position: absolute; /*  relative : the element is positioned relative to itself */
+    left: 100px;  /*absolute : the element is positioned relative to its closest positioned encestor */
+    top: 100px;
+}
+.one > .five{
+    position: fixed;
+    left: 100px;
+    top: 100px;
+}
+.item:nth-child(4n){
+    background-color: blueviolet;
+}
+.container:nth-child(2n){
+    background-color: aqua;
+}

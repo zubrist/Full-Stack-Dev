@@ -1,0 +1,23 @@
+.btn{
+    background-color: peru;
+    width: 150px;
+    height: 40px;
+    margin: 30px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: gray 10px 10px 10px;
+    transition: .5s;
+    font-size: 15pt;
+    border-radius: 5px;
+}
+div.btn:hover{
+    transform:translate(-10px, -10px );
+    box-shadow: gray 20px 20px 20px;
+    transition: 0.8s;
+
+}
+div.btn:active{
+    transform:translate(5px, 5px );
+    box-shadow: gray 5px 5px 3px;
+    transition: 0.1s;
+}

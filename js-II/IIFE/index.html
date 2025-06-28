@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIFE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="IIFE.js"></script>
+    
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #272822; /* Dark background color */
+            color: #ddd; /* Light text color */
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #373c3f; /* Darker container background color */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #fff; /* White text color */
+        }
+        p {
+            margin-bottom: 15px;
+            color: aqua;
+        }
+        .code-example {
+            background-color: #3e454a; /* Darker code example background color */
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        pre {
+            color: #ddd; /* Light text color for code */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: chartreuse;">IIFE</h1>
+        <div class="content">
+            <p>
+                IIFE - Immediately Invoked Function Expression : The code is executed as soon as the script is loaded into memory
+            </p>
+            <div class="code-example">
+                <h2>Example:</h2>
+                <pre>
+                    <code>
+                        (function(){
+                            console.log("hello");
+                        }) ();
+                    </code>
+                    
+                </pre>
+                <h4>Above code is executed as soon as the script is loaded into memory, 
+                    and it logs "Hello!" to the browser's console </h4>
+            </div>
+            <p>
+                Benefits - Its help us to create local scope without  polluting the global namespace, it also helps 
+                in preventing conflicts with other scripts that use similar variable
+            </p>
+            <div class="code-example">
+                <h2>Example:</h2>
+                <pre>
+                    <code>
+                        (function (){
+
+                            var a = 10;
+                            var b= 20;
+                            console.log(a + b);
+                        })();
+                        console.log(a); //  output : ReferenceError: a is not defined
+                    </code>
+                    
+                </pre>
+                <h4>although 'var' has  function scope but its value is not accessible outside of the IIFE  </h4>
+            </div>
+            <p>
+                Another use of IIFE is minification - lets understand with an example
+            </p>
+            <div class="code-example">
+                <h2>Example:</h2>
+                <pre>
+                    <code>
+                        function doMath(){
+                            console.log("3^4 = ", Math.pow(3, 4));
+                            console.log("root 4 =", Math.sqrt(4));
+                            console.log("sin(45) =",Math.sin(45));
+                        }
+                        doMath()
+                    </code>
+                </pre>
+                <h4>We can minimize this code using IIFE  like below:</h4>
+            </div>
+            <div class="code-example">
+                <h2>Example:</h2>
+                <pre>
+                    <code>
+                        (function (l,p,r,s){
+                            l("3^4 = "+p(3, 4));
+                            l("root 4 =" + r(4));
+                            l("sin(45) ="+ s(45));
+                        })(console.log, Math.pow, Math.sqrt,Math.sin);
+                        
+                    </code>
+                </pre>
+                <h4>Both the above code will gives the output:</h4>
+                <pre>
+                    3^4 =  81
+                    root 4 = 2
+                    sin(45) = 0.8509035245341184</pre>
+            </div>
+            
+        </div>
+    </div>
+
+    
+</body>
+</html>
