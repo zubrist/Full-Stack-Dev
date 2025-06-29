@@ -1,0 +1,1119 @@
+{
+	"tldrawFileFormatVersion": 1,
+	"schema": {
+		"schemaVersion": 2,
+		"sequences": {
+			"com.tldraw.store": 4,
+			"com.tldraw.asset": 1,
+			"com.tldraw.camera": 1,
+			"com.tldraw.document": 2,
+			"com.tldraw.instance": 25,
+			"com.tldraw.instance_page_state": 5,
+			"com.tldraw.page": 1,
+			"com.tldraw.instance_presence": 6,
+			"com.tldraw.pointer": 1,
+			"com.tldraw.shape": 4,
+			"com.tldraw.asset.bookmark": 2,
+			"com.tldraw.asset.image": 5,
+			"com.tldraw.asset.video": 5,
+			"com.tldraw.shape.group": 0,
+			"com.tldraw.shape.text": 3,
+			"com.tldraw.shape.bookmark": 2,
+			"com.tldraw.shape.draw": 2,
+			"com.tldraw.shape.geo": 10,
+			"com.tldraw.shape.note": 9,
+			"com.tldraw.shape.line": 5,
+			"com.tldraw.shape.frame": 1,
+			"com.tldraw.shape.arrow": 6,
+			"com.tldraw.shape.highlight": 1,
+			"com.tldraw.shape.embed": 4,
+			"com.tldraw.shape.image": 5,
+			"com.tldraw.shape.video": 4,
+			"com.tldraw.binding.arrow": 1
+		}
+	},
+	"records": [
+		{
+			"x": 91.95951216565095,
+			"y": 1077.8193020385133,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:lQSqo1NM9JlgLbXWI-1qB",
+			"type": "arrow",
+			"props": {
+				"kind": "arc",
+				"elbowMidPoint": 0.5,
+				"dash": "draw",
+				"size": "s",
+				"fill": "none",
+				"color": "red",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 38.60217402310198,
+					"y": -0.8674511996077854
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"text": "",
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aHAq8",
+			"typeName": "shape"
+		},
+		{
+			"id": "pointer:pointer",
+			"typeName": "pointer",
+			"x": 282.58482860906946,
+			"y": 1107.5299457372673,
+			"lastActivityTimestamp": 1751219861436,
+			"meta": {}
+		},
+		{
+			"meta": {},
+			"id": "binding:thHY1-oAc79mlQxNpxFLz",
+			"type": "arrow",
+			"fromId": "shape:Tp_N5Ko6T5XZ0r1SOKg7F",
+			"toId": "shape:SXoYhuJqv7_8q0sP2ohX5",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.031143601493016766,
+					"y": 0.5356539067092431
+				},
+				"snap": "none",
+				"terminal": "end"
+			},
+			"typeName": "binding"
+		},
+		{
+			"x": -8.46606019443574,
+			"y": -779.6283889048585,
+			"z": 0.7685233410733627,
+			"meta": {},
+			"id": "camera:page:page",
+			"typeName": "camera"
+		},
+		{
+			"id": "asset:-680328388",
+			"type": "image",
+			"typeName": "asset",
+			"props": {
+				"name": "tldrawFile",
+				"src": "data:image/png;base64,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",
+				"w": 281,
+				"h": 191,
+				"fileSize": 11107,
+				"mimeType": "image/png",
+				"isAnimated": false
+			},
+			"meta": {}
+		},
+		{
+			"x": 13.95241314736451,
+			"y": 673.4635163277884,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:NukubOkM8tqSKysKVWJ6p",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "l",
+				"w": 164.74562651619183,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1.138958593784399,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Position"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a87h6",
+			"typeName": "shape"
+		},
+		{
+			"x": 84.21703246859497,
+			"y": 861.1687007942655,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:Vwh4uyEnqKQukMsE7sanU",
+			"type": "arrow",
+			"props": {
+				"kind": "arc",
+				"elbowMidPoint": 0.5,
+				"dash": "draw",
+				"size": "s",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 26.457668609083726,
+					"y": 0
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"text": "",
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aABFB",
+			"typeName": "shape"
+		},
+		{
+			"x": 74.67494021745571,
+			"y": 756.2055172669089,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:y_ZuUL-akVcZaUkGr-HDw",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 747.9166870117188,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "The position property lets us take an element out of the normal document flow"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "and place it exactly  where we want it."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": " "
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a9Bvq",
+			"typeName": "shape"
+		},
+		{
+			"x": 142.70618167542852,
+			"y": 1065.6747866971523,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:S5eg_UDQXBWbkf9bkeFv-",
+			"type": "text",
+			"props": {
+				"color": "red",
+				"size": "s",
+				"w": 863.3021240234375,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "sticky : A mix of "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "highlight"
+										}
+									],
+									"text": "relative "
+								},
+								{
+									"type": "text",
+									"text": "and "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "highlight"
+										}
+									],
+									"text": "fixed"
+								},
+								{
+									"type": "text",
+									"text": ". It scrolls with the page untill it reaches a specific point "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "we define . "
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aI7m9",
+			"typeName": "shape"
+		},
+		{
+			"editingShapeId": null,
+			"croppingShapeId": null,
+			"selectedShapeIds": [
+				"shape:S5eg_UDQXBWbkf9bkeFv-"
+			],
+			"hoveredShapeId": null,
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:page",
+			"pageId": "page:page",
+			"typeName": "instance_page_state"
+		},
+		{
+			"x": 119.34937191123814,
+			"y": 846.4218318540815,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:8M2FvbKtFNhUnXB38WvNK",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "s",
+				"w": 692.78125,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "static : The  dafult. The elements just sits in the normal flow of the page."
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aB3VB",
+			"typeName": "shape"
+		},
+		{
+			"x": 159,
+			"y": 379.18750953674316,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:ohVvJh0iGJaw3eWwG0N7U",
+			"type": "text",
+			"props": {
+				"color": "light-blue",
+				"size": "s",
+				"w": 790.1666870117188,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "orderedList",
+							"attrs": {
+								"start": 1
+							},
+							"content": [
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "content : in this part we, write our text , or have images . we control the width"
+												}
+											]
+										},
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "and height."
+												}
+											]
+										},
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											}
+										},
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											}
+										},
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": " "
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a4AWG",
+			"typeName": "shape"
+		},
+		{
+			"x": 157.33334350585938,
+			"y": 445.1875705718994,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:6Gljxqx3I15SvSDgBd7QN",
+			"type": "text",
+			"props": {
+				"color": "light-green",
+				"size": "s",
+				"w": 617.78125,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "orderedList",
+							"attrs": {
+								"start": 2
+							},
+							"content": [
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "padding : the transparent space between content and border"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a54KE",
+			"typeName": "shape"
+		},
+		{
+			"x": 120.18975149447789,
+			"y": 901.9395425257574,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:g9OAvyAhWhoc6dF7loq5C",
+			"type": "arrow",
+			"props": {
+				"kind": "arc",
+				"elbowMidPoint": 0.5,
+				"dash": "draw",
+				"size": "s",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": -38.60217402310195,
+					"y": 44.24064652992274
+				},
+				"end": {
+					"x": 2.6024032355363715,
+					"y": 56.385241290024624
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"text": "",
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aECN2",
+			"typeName": "shape"
+		},
+		{
+			"x": 354.3333435058594,
+			"y": 129.18750953674316,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:E52JLSdDclMCA2zQaA-5h",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 491.6875,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Every element on our webpage is a rectangular box."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a29PW",
+			"typeName": "shape"
+		},
+		{
+			"x": 120.67470107767869,
+			"y": 861.1687007942655,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:Tp_N5Ko6T5XZ0r1SOKg7F",
+			"type": "arrow",
+			"props": {
+				"kind": "arc",
+				"elbowMidPoint": 0.5,
+				"dash": "draw",
+				"size": "s",
+				"fill": "none",
+				"color": "black",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": -38.60217402310195,
+					"y": 44.24064652992274
+				},
+				"end": {
+					"x": 2.6024032355363715,
+					"y": 56.385241290024624
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"text": "",
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aDBne",
+			"typeName": "shape"
+		},
+		{
+			"x": 153.78114318847656,
+			"y": 493.1875400543213,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:CtEb0L37mgOXTwYuCnWte",
+			"type": "text",
+			"props": {
+				"color": "yellow",
+				"size": "s",
+				"w": 798.8541870117188,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": " 3. border: this is a line that drawn around the padding and content . It have a size,"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "\tstyle and color"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a6AdH",
+			"typeName": "shape"
+		},
+		{
+			"x": 112.00001525878906,
+			"y": 307.3333740234375,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:hrysyvgBrZRZOkvwkSn2B",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "s",
+				"w": 716.5625,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "The Css Box model describes the different layers that make up this box and "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "control its size and spacing . "
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a38ib",
+			"typeName": "shape"
+		},
+		{
+			"x": 146.5052337646483,
+			"y": 560.3542677561443,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:fyksoYdize1Yjlw-mu5a6",
+			"type": "text",
+			"props": {
+				"color": "orange",
+				"size": "s",
+				"w": 568.7708740234375,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "orderedList",
+							"attrs": {
+								"start": 4
+							},
+							"content": [
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Mrgin : The Transparent space outside the Box`s border. "
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a759D",
+			"typeName": "shape"
+		},
+		{
+			"x": 119.48442869893324,
+			"y": 892.3974602019608,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:SXoYhuJqv7_8q0sP2ohX5",
+			"type": "text",
+			"props": {
+				"color": "yellow",
+				"size": "s",
+				"w": 648.6771240234375,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "relative : the element`s box is moved relative to its normal  postion.  "
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aC2TZ",
+			"typeName": "shape"
+		},
+		{
+			"x": 131.42913738836063,
+			"y": 996.928296321324,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:TA0cGfY62SuWlrzLOpbgN",
+			"type": "text",
+			"props": {
+				"color": "green",
+				"size": "s",
+				"w": 916.125,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "fixed : element is removed from the normal flow and positioned relative to the browser window ."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "it will stay in the same place even if we scroll  the page."
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aG4fl",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "page:page",
+			"name": "Page 1",
+			"index": "a1",
+			"typeName": "page"
+		},
+		{
+			"gridSize": 10,
+			"name": "",
+			"meta": {},
+			"id": "document:document",
+			"typeName": "document"
+		},
+		{
+			"followingUserId": null,
+			"opacityForNextShape": 1,
+			"stylesForNextShape": {
+				"tldraw:color": "red",
+				"tldraw:size": "s",
+				"tldraw:geo": "rectangle"
+			},
+			"brush": null,
+			"scribbles": [],
+			"cursor": {
+				"type": "move",
+				"rotation": 0
+			},
+			"isFocusMode": false,
+			"exportBackground": true,
+			"isDebugMode": false,
+			"isToolLocked": false,
+			"screenBounds": {
+				"x": 0,
+				"y": 0,
+				"w": 1042,
+				"h": 605.3333740234375
+			},
+			"insets": [
+				false,
+				false,
+				true,
+				false
+			],
+			"zoomBrush": null,
+			"isGridMode": false,
+			"isPenMode": false,
+			"chatMessage": "",
+			"isChatting": false,
+			"highlightedUserIds": [],
+			"isFocused": true,
+			"devicePixelRatio": 1.5,
+			"isCoarsePointer": false,
+			"isHoveringCanvas": true,
+			"openMenus": [],
+			"isChangingStyle": false,
+			"isReadonly": false,
+			"meta": {},
+			"duplicateProps": null,
+			"id": "instance:instance",
+			"currentPageId": "page:page",
+			"typeName": "instance"
+		},
+		{
+			"meta": {},
+			"id": "binding:hrxLjh1H6pLXyhodQjvtC",
+			"type": "arrow",
+			"fromId": "shape:g9OAvyAhWhoc6dF7loq5C",
+			"toId": "shape:yqGH-UZurG9lVY5GnMH-3",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.036052923910440744,
+					"y": 0.2678261360091257
+				},
+				"snap": "none",
+				"terminal": "end"
+			},
+			"typeName": "binding"
+		},
+		{
+			"x": 55.49995422363281,
+			"y": 83.16667175292969,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:nVsmiY37V3ZEpONjeuqxc",
+			"type": "image",
+			"props": {
+				"w": 279.6667175292969,
+				"h": 190.09374750211998,
+				"assetId": "asset:-680328388",
+				"playing": true,
+				"url": "",
+				"crop": null,
+				"flipX": false,
+				"flipY": false,
+				"altText": ""
+			},
+			"parentId": "page:page",
+			"index": "a1",
+			"typeName": "shape"
+		},
+		{
+			"x": 118.99947911573241,
+			"y": 933.1683019334527,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:yqGH-UZurG9lVY5GnMH-3",
+			"type": "text",
+			"props": {
+				"color": "violet",
+				"size": "s",
+				"w": 883.4896240234375,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "obsolute: The element is completely removed from the normal flow and positioned relative to "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "its nearest positioned ancestor .."
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "aCddB",
+			"typeName": "shape"
+		},
+		{
+			"x": 86.75472554926353,
+			"y": 1010.8076743525298,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:vbX6yXntG2Y5JzZMs0Ks4",
+			"type": "arrow",
+			"props": {
+				"kind": "arc",
+				"elbowMidPoint": 0.5,
+				"dash": "draw",
+				"size": "s",
+				"fill": "none",
+				"color": "green",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 33.39737747937184,
+					"y": 0.00003970937029862398
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"text": "",
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "aFB6D",
+			"typeName": "shape"
+		}
+	]
+}
