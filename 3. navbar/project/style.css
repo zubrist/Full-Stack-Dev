@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgba(59, 31, 12, 0.907);
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: #1B3C53;
+    box-sizing: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav-one{
+    
+    display: flex;
+    gap: 20px;
+}
+
+.nav-two a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 15px;
+    padding: 10px 10px;
+    
+}
+.dropdown{
+    background-color: rgb(194, 194, 54);
+    display: none;
+    position: absolute;
+    box-shadow: 0 8px 16px rgba(244, 10, 10, 0.3);
+    z-index:1
+
+}
+.has-dropdown{
+    position: relative;
+}
+
+.nav-two:hover .dropdown{
+    display: block;
+}
