@@ -30,7 +30,7 @@ nav{
     
 }
 .dropdown{
-    background-color: rgb(194, 194, 54);
+    background-color: #495057;
     display: none;
     position: absolute;
     box-shadow: 0 8px 16px rgba(244, 10, 10, 0.3);
@@ -44,3 +44,4 @@ nav{
 .nav-two:hover .dropdown{
     display: block;
 }
+

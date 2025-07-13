@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgba(210, 236, 139, 0.907);
+}
+.page-container{
+    max-width: 1200px; margin: 40px auto; padding: 0 20px;
+}
+.menu-title{
+    margin-bottom: 20px;
+    
+}
+
+.menu-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap : 20px;
+}
+
+.menu-card{
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 0.5px solid #020202;
+    cursor:pointer ;
+
+}
+.card-image-container{
+    position: relative;
+    
+}
+.card-image{
+    width: 100%;
+    /* object-fit: cover; */
+    height: 150px;
+    
+}
+.card-body{
+    padding-left: 25px;
+    padding-bottom: 4px;
+}
+.card-title{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0ea706;
+
+}
+
+.card-description{
+    font-size: 0.8rem;
+    color: #818181;
+    margin: 2px 0;
+    /* padding: ; */
+}
+
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.price{
+    font-weight:bolder ;
+    color: #1b3c53;
+}
+.per{
+    font-size: 0.8rem;
+    color: #818181;
+    margin-left: -0.001rem;
+    /* padding-left: 5%; */
+}
+.order-button{
+
+    margin-right: 10px;
+    
+
+}
+button{
+    background-color: aquamarine;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
