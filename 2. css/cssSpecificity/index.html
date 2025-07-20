@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #div-info{
+            background-color: lightcyan;
+        }
+        .div-info{
+            border: 2px solid black;
+            background-color: rgb(125, 244, 125);
+        }
+        /* div{
+            border: 2px solid black;
+            background-color: turquoise;
+        } */
+        #one{
+            background-color: lightgreen;
+        }
+        #one{
+            background-color: lightskyblue;
+        }
+        .item{
+            background-color: lightgreen;
+        }
+        .item{
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+            margin: 10px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div style="background-color: bisque;" class="div-info" id="div-info"> 
+        Css Specificity helps to determine which CSS rule is the 
+        most specific and therefore should be applied to an element when 
+        multiple rules match the same element.
+        <div>Order of Specificity</div>
+            <div>inline -> id -> class -> Pseudo/tag</div>
+    </div>
+
+
+    <div class="item" id="one"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item" id="one"></div>
+</body>
+</html>
