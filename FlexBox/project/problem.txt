@@ -1,0 +1,7 @@
+Design a web page layout using HTML and CSS Flexbox. 
+The layout should have :
+(a) A header section ✅
+(b)A navigation menu ✅
+(c)A main content area ✅
+(d) A sidebar ✅
+(e) A footer ✅

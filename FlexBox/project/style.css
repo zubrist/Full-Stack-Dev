@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 98vh; /* Ensures the body takes at least full viewport height */
+}
+header{
+    background-color: #e8ffd7;
+    /* color:; */ /*text color can be set here */
+    padding: 1rem;
+    text-align: center;
+}
+
+nav{
+    background-color: #93da97;
+    padding: 1rem;
+    text-align: right;
+   
+
+}
+nav a{
+    color: #e8ffd7;
+    margin: 0 10px;
+    text-decoration: none;
+}
+nav a:hover{
+    color: aqua;
+    text-decoration: underline;
+
+}
+
+.main-wrapper{
+    display: flex;;
+    flex-direction: row;
+    
+    flex: 1;
+    /*It allows the wrapper to grow and take up available space*/
+}
+main{
+    
+    background-color: #5e936c;
+    padding: 1rem;
+    flex-grow: 3; /* Main content takes up more space */
+}
+
+aside{
+    background-color:#3e5f44 ;
+    color: #e8ffd7;
+    padding: 1rem;
+    flex-grow: 1; /* Sidebar takes up less space */
+
+}
+footer{
+    background-color: #e8ffd7;
+    color: #3e5f44;
+    padding: 0.2rem;
+    text-align: right;
+}
