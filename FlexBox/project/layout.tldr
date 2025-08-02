@@ -36,9 +36,9 @@
 		{
 			"id": "pointer:pointer",
 			"typeName": "pointer",
-			"x": 57.034806947780964,
-			"y": 801.9674628082064,
-			"lastActivityTimestamp": 1753544080120,
+			"x": 312.73938265836466,
+			"y": 451.26051145565174,
+			"lastActivityTimestamp": 1753544295316,
 			"meta": {}
 		},
 		{
@@ -131,8 +131,8 @@
 			"typeName": "shape"
 		},
 		{
-			"x": 291.5130080612104,
-			"y": -398.51564628732507,
+			"x": 271.4637974633479,
+			"y": 164.40449742188554,
 			"z": 0.6484045811452582,
 			"meta": {},
 			"id": "camera:page:page",
@@ -185,7 +185,7 @@
 			"id": "shape:hcv8Ro4MLnWjkhNNtieSj",
 			"type": "geo",
 			"props": {
-				"w": 372.4000053405762,
+				"w": 377.9521038423435,
 				"h": 61.70000076293945,
 				"geo": "rectangle",
 				"dash": "draw",
@@ -225,9 +225,9 @@
 			"editingShapeId": null,
 			"croppingShapeId": null,
 			"selectedShapeIds": [
-				"shape:nRw64BrPYbXphhRFqnPvY"
+				"shape:skqknSKlEh2fZCN4ymnM9"
 			],
-			"hoveredShapeId": "shape:nRw64BrPYbXphhRFqnPvY",
+			"hoveredShapeId": "shape:u1L8lM3X1YoL5rzuFHGHA",
 			"erasingShapeIds": [],
 			"hintingShapeIds": [],
 			"focusedGroupId": null,
@@ -246,7 +246,7 @@
 			"id": "shape:e0zntzqbBYsAMUmfSJIiy",
 			"type": "geo",
 			"props": {
-				"w": 369.0226059494803,
+				"w": 377.0422619492398,
 				"h": 38.626486588018395,
 				"geo": "rectangle",
 				"dash": "draw",
@@ -286,7 +286,7 @@
 			"id": "shape:skqknSKlEh2fZCN4ymnM9",
 			"type": "geo",
 			"props": {
-				"w": 264.7999801635742,
+				"w": 276.5210194759644,
 				"h": 342.39996337890625,
 				"geo": "rectangle",
 				"dash": "draw",
@@ -323,8 +323,8 @@
 			"typeName": "shape"
 		},
 		{
-			"x": -195.62723610932477,
-			"y": 752.6285128210943,
+			"x": -191.3089457725801,
+			"y": 753.862362168554,
 			"rotation": 0,
 			"isLocked": false,
 			"opacity": 1,
@@ -399,7 +399,7 @@
 			"typeName": "shape"
 		},
 		{
-			"x": 35.81823943933405,
+			"x": 35.818239439334036,
 			"y": 543.8365167295335,
 			"rotation": 0,
 			"isLocked": false,
@@ -408,8 +408,8 @@
 			"id": "shape:ehh5pxX0eM9B8jvlKWoyN",
 			"type": "geo",
 			"props": {
-				"w": 371.5117733215657,
-				"h": 56.30000114440918,
+				"w": 375.21325076548135,
+				"h": 61.23521027167839,
 				"geo": "rectangle",
 				"dash": "draw",
 				"growY": 0,
@@ -517,7 +517,7 @@
 			"screenBounds": {
 				"x": 0,
 				"y": 0,
-				"w": 807.2000122070312,
+				"w": 864,
 				"h": 749.6000366210938
 			},
 			"insets": [
@@ -555,7 +555,7 @@
 			"id": "shape:u1L8lM3X1YoL5rzuFHGHA",
 			"type": "geo",
 			"props": {
-				"w": 102.79998779296875,
+				"w": 108.35208629473595,
 				"h": 344.80003356933594,
 				"geo": "rectangle",
 				"dash": "draw",
