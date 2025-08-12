@@ -24,7 +24,7 @@
 			"com.tldraw.shape.note": 9,
 			"com.tldraw.shape.line": 5,
 			"com.tldraw.shape.frame": 1,
-			"com.tldraw.shape.arrow": 6,
+			"com.tldraw.shape.arrow": 7,
 			"com.tldraw.shape.highlight": 1,
 			"com.tldraw.shape.embed": 4,
 			"com.tldraw.shape.image": 5,
@@ -36,9 +36,9 @@
 		{
 			"id": "pointer:pointer",
 			"typeName": "pointer",
-			"x": 1949.5425734823534,
-			"y": -213.63738098871488,
-			"lastActivityTimestamp": 1750604732418,
+			"x": -1250.103604693524,
+			"y": -203.42305306604652,
+			"lastActivityTimestamp": 0,
 			"meta": {}
 		},
 		{
@@ -296,9 +296,9 @@
 			"typeName": "shape"
 		},
 		{
-			"x": 1730.720407045781,
-			"y": 232.39987300376657,
-			"z": 0.21319129659275057,
+			"x": 1250.103604693524,
+			"y": 203.42305306604652,
+			"z": 0.23596814303408248,
 			"meta": {},
 			"id": "camera:page:page",
 			"typeName": "camera"
@@ -891,8 +891,8 @@
 			"screenBounds": {
 				"x": 0,
 				"y": 0,
-				"w": 962.4000244140625,
-				"h": 689.6000366210938
+				"w": 838.4000244140625,
+				"h": 749.6000366210938
 			},
 			"insets": [
 				false,
@@ -909,7 +909,7 @@
 			"isFocused": true,
 			"devicePixelRatio": 1.25,
 			"isCoarsePointer": false,
-			"isHoveringCanvas": false,
+			"isHoveringCanvas": null,
 			"openMenus": [],
 			"isChangingStyle": false,
 			"isReadonly": false,

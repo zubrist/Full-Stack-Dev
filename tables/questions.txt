@@ -1,0 +1,41 @@
+1) What is the correct name for a table-cell ?
+-> <tc> , <tr> , <td>  => <td>
+
+2. What is the correct name for a table-row ?
+-> <tc> , <tr> , <td>  => <tr>
+
+
+3. Table should have a record -> Reja and 25 
+
+<table>
+<tr>  
+    <th> name </th>
+    <th> Age </th>
+</tr>
+---
+---
+---
+---
+
+
+</table>
+
+=> 
+<tr>  
+    <th> name </th>
+    <th> Age </th>
+</tr>
+<tr>
+<th> Reja </th>
+<th> 35 </th>
+</tr>
+</table>
+
+4. What is the correct attribute for specifying how many columns a cell should span?
+=> colspan
+
+5. What is the correct attribute for specifying how many rowa a cell should span?
+=> rowspan
+
+6. purpose of <caption> tag
+=> provides the title or description for the entire table
