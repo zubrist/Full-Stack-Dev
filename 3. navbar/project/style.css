@@ -45,3 +45,34 @@ nav{
     display: block;
 }
 
+
+
+/* HERO: full-bleed carousel look */
+.hero { position:relative; overflow:hidden; min-height:68vh; display:block; }
+.hero-slider { height:100%; position:relative; }
+.hero-slide { position:absolute;  background-size:cover; background-position:center;  transform:scale(1.02); transition:opacity .7s ease, transform .9s ease; display:flex; align-items:center; }
+.hero-slide.active { opacity:1; transform:scale(1); z-index:1; }
+
+/* overlay for soft darkening */
+.hero-overlay { position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,10,10,0.28), rgba(10,10,10,0.45)); mix-blend-mode:multiply; }
+
+/* inner container aligning content center */
+.hero-inner { position:relative; z-index:2; display:flex; align-items:center; min-height:68vh; }
+.hero-content { max-width:760px; color: #fff; text-align:center; margin:0 auto; padding: 4rem 1rem; }
+
+/* typography */
+.eyebrow { color: rgba(255,255,255,0.85); font-weight:600; margin-bottom:10px; letter-spacing:0.6px; text-transform:capitalize; }
+.hero-title { font-family: 'Georgia', 'Times New Roman', serif; font-size:3.2rem; line-height:1.02; margin:0 0 20px; color:#fff; font-weight:700; text-shadow:0 6px 20px rgba(0,0,0,0.45); }
+.hero-cta .btn { padding:14px 22px; font-size:1rem; border-radius:8px; }
+
+/* arrows */
+.hero-arrow { position:absolute; top:50%; transform:translateY(-50%); z-index:3; background:transparent; color:#fff; border:none; font-size:46px; width:64px; height:64px; display:flex; align-items:center; justify-content:center; cursor:pointer; opacity:.85; transition:opacity .15s; }
+.hero-prev { left:20px; }
+.hero-next { right:20px; }
+.hero-arrow:hover { opacity:1; }
+
+/* dots */
+.hero-dots { position:absolute; left:50%; transform:translateX(-50%); bottom:26px; display:flex; gap:8px; z-index:3; }
+.dot { width:12px; height:12px; background:rgba(255,255,255,0.5); border-radius:50%; border:none; cursor:pointer; transition:transform .18s, background .18s; }
+.dot.active { background:#f6c891; transform:scale(1.15); box-shadow:0 6px 18px rgba(0,0,0,0.15); }
+
