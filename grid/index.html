@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .grid-container{
+            background-color: palevioletred;
+            display: grid;
+            /* grid-template-columns: 100px 50px 200px 280px; */
+            grid-template-columns: 2fr 1fr 3fr;
+            /* grid-template-columns: 5% 30% 25% 40%; */
+            gap: 10px;  /* row and column gap both */
+            column-gap: 15px;
+            row-gap:15px
+        }
+        .grid-container  div {
+            border-radius: 5px;
+            background-color: cadetblue;
+            padding: 10px;
+            margin-bottom: 2px;
+            border: 2px solid black;
+           
+        }
+        .grid-container2{
+            background-color: lightgreen;
+            display: grid;
+            grid-template-columns: repeat(3, 2fr);
+        }
+        .grid-container2 div{
+            border-radius: 5px;
+            background-color: cadetblue;
+            padding: 10px;
+            margin-bottom: 2px;
+            border: 2px solid black;
+        }
+        .grid-container3{
+            background-color: lightcoral;
+            display: grid;
+            /* grid-template-rows: repeat(2,200px); */
+            grid-template-rows: 2fr auto minmax(50px, 100px) 4em;
+        }
+        .grid-container3 div{
+            border-radius: 5px;
+            background-color: rgb(195, 239, 118);
+            padding: 10px;
+            margin-bottom: 2px;
+            border: 2px solid black;
+        }
+
+        .grid-container4 div{
+            border-radius: 5px;
+            background-color: rgb(118, 239, 178);
+            padding: 10px;
+            margin-bottom: 2px;
+            border: 2px solid black;
+        }
+        .grid-container4{
+            background-color: rgb(254, 5, 5);
+            display: grid;
+            grid-template-columns: fit-content(100px) fit-content(200px) fit-content(100px);
+            grid-template-rows: 50px 60px;
+            grid-column-gap: 10px;
+            grid-row-gap: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is Grid System Page</h1>
+
+    <div class="grid-container">
+        <div class="grid-item item1">1</div>
+        <div class="grid-item item2">2</div>
+        <div class="grid-item item3">3</div>  
+        <div class="grid-item item4">4</div>
+        <div class="grid-item item5">5</div>
+        <div class="grid-item item6">6</div>  
+        <div class="grid-item item7">7</div>
+        <div class="grid-item item8">8</div>
+        <div class="grid-item item9">9</div>
+    </div>
+    <br>
+    <div class="grid-container2">
+        <div class="grid-item item1">1</div>
+        <div class="grid-item item2">2</div>
+        <div class="grid-item item3">3</div>  
+        <div class="grid-item item4">4</div>
+        <div class="grid-item item5">5</div>
+        <div class="grid-item item6">6</div>  
+        <div class="grid-item item7">7</div>
+        <div class="grid-item item8">8</div>
+        <div class="grid-item item9">9</div>
+    </div>
+
+    <br>
+    <div class="grid-container3">
+        <div class="grid-item item1">1</div>
+        <div class="grid-item item2">2</div>
+        <div class="grid-item item3">3</div>  
+        <div class="grid-item item4">4</div>
+       
+    </div>
+
+    <br>
+    <div class="grid-container4">
+        <div class="grid-item item1">one 1</div>
+        <div class="grid-item item2">two 2</div>
+        <div class="grid-item item3">three 3</div>  
+        <div class="grid-item item4">four 4</div>
+       
+    </div>
+
+
+    
+    
+</body>
+</html>
