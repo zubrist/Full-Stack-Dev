@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- PRINCIPLE 1: The essential viewport meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design in Action</title>
+    <style>
+        /* ===============================
+           MOBILE-FIRST STYLES (Default)
+           Screen width < 600px
+           =============================== */
+        :root {
+            --padding: 15px;
+            --card-bg: white;
+            --shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: sans-serif;
+            background-color: #a7c5eb; /* Light Blue for Mobile */
+            transition: background-color 0.3s ease;
+            padding: var(--padding);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        .card-container {
+            display: grid;
+            /* On mobile, we have a single column */
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: rgba(221, 132, 132, 0.642);
+            border-radius: 8px;
+            box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
+            overflow: hidden; /* Ensures image corners are rounded */
+        }
+        
+        /* PRINCIPLE 2: Flexible Images */
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .card-content {
+            padding: 10px;
+        }
+
+        .card-content h2 {
+            margin-bottom: 0.5rem;
+        }
+
+        /* =========================================
+           PRINCIPLE 3: MEDIA QUERY FOR TABLETS
+           Screen width >= 600px
+           ========================================= */
+        @media (min-width: 600px) {
+            body {
+                background-color: #b3e2cd; /* Light Green for Tablet */
+            }
+
+            /* On tablets, we change to a 2-column layout */
+            .card-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* =========================================
+           PRINCIPLE 3: MEDIA QUERY FOR DESKTOPS
+           Screen width >= 900px
+           ========================================= */
+        @media (min-width: 900px) {
+            body {
+                background-color: #fdc2a3; /* Light Orange for Desktop */
+            }
+
+            /* On desktops, we change to a 3-column layout */
+            .card-container {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Resize Your Browser Window!</h1>
+    
+    <div class="card-container">
+        <div class="card">
+            <img src="https://placehold.co/600x400/3498db/ffffff?text=Image+1" alt="Placeholder">
+            <div class="card-content">
+                <h2>Card One</h2>
+                <p>On a mobile device, this card will take up the full width. On a tablet, it will be one of two columns.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://placehold.co/600x400/2ecc71/ffffff?text=Image+2" alt="Placeholder">
+            <div class="card-content">
+                <h2>Card Two</h2>
+                <p>On a desktop, this card will be part of a three-column layout, making efficient use of the space.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://placehold.co/600x400/e74c3c/ffffff?text=Image+3" alt="Placeholder">
+            <div class="card-content">
+                <h2>Card Three</h2>
+                <p>The layout adapts automatically based on the screen width defined in the CSS media queries.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
