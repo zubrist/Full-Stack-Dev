@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book Style Index (Single Grid)</title>
+  <link rel="stylesheet" href="book-index.css" />
+  <style>
+    :root{
+  /* Adjust column widths and row heights here */
+  --cols: 70px 1.6fr 1fr 90px;        /* 4 columns: Letter | Term | Topic | Page */
+  --rows: 56px 84px 64px 96px 64px 64px; /* 6 rows with different heights */
+  --gap: 8px;
+  --ink: #1b1b1b;
+  --paper: #fbfbfb;
+  --rule: #d7d7d7;
+}
+
+*{ box-sizing: border-box; }
+html,body{ height:100%; }
+body{
+  margin: 20px;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+h1{
+  text-align:center;
+  letter-spacing: .5px;
+  margin: 0 0 16px;
+  font-weight:700;
+}
+
+.index-grid{
+  display:grid;                                 /* single grid */
+  grid-template-columns: var(--cols);           /* same column widths for all rows */
+  grid-template-rows: var(--rows);              /* each row height fixed for that row */
+  gap: var(--gap);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 12px;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: #fff;
+}
+
+/* base cell styling */
+.cell{
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display:flex;
+  align-items:center;
+  background: #fff;
+}
+
+/* column-specific alignment */
+.letter{ justify-content:center; font-weight:700; }
+.term  { justify-content:flex-start; font-weight:600; }
+.topic { justify-content:flex-start; color:#545; }
+.page  { justify-content:center; font-variant-numeric: tabular-nums; }
+
+/* optional: subtle zebra rows using grid-row selectors */
+.cell:nth-child(4n+1),
+.cell:nth-child(4n+2),
+.cell:nth-child(4n+3),
+.cell:nth-child(4n+4){
+  background: #fffdfa;
+}
+
+/* responsive: on small screens keep the same idea but shrink columns */
+@media (max-width: 640px){
+  :root{ --cols: 48px 1.4fr .9fr 64px; }
+  .index-grid{ padding: 10px; }
+}
+  </style>
+</head>
+<body>
+  <h1>Index</h1>
+
+  <!-- ONE grid controls all columns and rows -->
+  <div class="index-grid">
+    <!-- Row 1 -->
+    <div class="cell letter">A</div>
+    <div class="cell term">Appetizers</div>
+    <div class="cell topic">Starters</div>
+    <div class="cell page">12</div>
+
+    <!-- Row 2 (taller row) -->
+    <div class="cell letter">B</div>
+    <div class="cell term">Biryani (Chicken)</div>
+    <div class="cell topic">Main Course</div>
+    <div class="cell page">34</div>
+
+    <!-- Row 3 -->
+    <div class="cell letter">B</div>
+    <div class="cell term">Beverages</div>
+    <div class="cell topic">Drinks</div>
+    <div class="cell page">40</div>
+
+    <!-- Row 4 (even taller row) -->
+    <div class="cell letter">C</div>
+    <div class="cell term">Chaat Platter</div>
+    <div class="cell topic">Street Bites</div>
+    <div class="cell page">18</div>
+
+    <!-- Row 5 -->
+    <div class="cell letter">C</div>
+    <div class="cell term">Curries (Veg)</div>
+    <div class="cell topic">Main Course</div>
+    <div class="cell page">46</div>
+
+    <!-- Row 6 -->
+    <div class="cell letter">D</div>
+    <div class="cell term">Desserts</div>
+    <div class="cell topic">Sweets</div>
+    <div class="cell page">58</div>
+  </div>
+</body>
+</html>
