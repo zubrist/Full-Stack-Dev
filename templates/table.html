@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reusable Table Template</title>
+
+    <!--
+        Internal CSS so the file is self-contained.
+        Modify the custom properties in :root to quickly restyle.
+    -->
+    <style>
+        :root {
+            /* Color + spacing tokens */
+            --table-bg: #ffffff;
+            --table-border: #d4d8de;
+            --header-bg: #0f4c81;
+            --header-text: #ffffff;
+            --row-alt-bg: #f5f7fa;
+            --row-hover-bg: #e7f1ff;
+            --caption-color: #39424e;
+            --body-text: #1f2933;
+            --font-base: "Segoe UI", Roboto, Arial, sans-serif;
+            --radius: 10px;
+            --spacing-y: 0.75rem;
+            --spacing-x: 1rem;
+            --transition: 160ms ease;
+        }
+
+        body {
+            margin: 0;
+            padding: 2rem;
+            font-family: var(--font-base);
+            background: linear-gradient(180deg, #fdfdfd 0%, #eef2f5 100%);
+            color: var(--body-text);
+            min-height: 100vh;              /* keep full height */
+            display: flex;
+            align-items: center;             /* vertical center */
+            justify-content: center;         /* horizontal center */
+        }
+
+        .table-wrapper {
+            max-width: 960px;
+            width: 100%;
+            margin: 0 auto;
+            background: var(--table-bg);
+            border: 1px solid var(--table-border);
+            border-radius: var(--radius);
+            box-shadow: 0 16px 30px rgba(31, 41, 51, 0.08);
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        caption {
+            padding: 1.25rem;
+            text-align: left;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--caption-color);
+            background: #f4f6f9;
+            border-bottom: 1px solid var(--table-border);
+        }
+
+        thead tr {
+            background: var(--header-bg);
+            color: var(--header-text);
+        }
+
+        th,
+        td {
+            padding: var(--spacing-y) var(--spacing-x);
+            border-bottom: 1px solid var(--table-border);
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        th {
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        tbody tr:nth-child(even) {
+            background: var(--row-alt-bg);
+        }
+
+        tbody tr:hover {
+            background: var(--row-hover-bg);
+            transition: background var(--transition);
+        }
+
+        tfoot {
+            background: #f4f6f9;
+            font-weight: 600;
+        }
+
+        .numeric {
+            text-align: right;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.15rem 0.55rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            background: rgba(15, 76, 129, 0.12);
+            color: #0f4c81;
+        }
+
+        @media (max-width: 720px) {
+            body {
+                padding: 1rem;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            th,
+            td {
+                padding: 0.65rem 0.75rem;
+            }
+
+            caption {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="table-wrapper">
+        <table>
+            <!-- Caption is optional; use it for accessibility-friendly titles -->
+            <caption>Replace with Your Table Title</caption>
+
+            <thead>
+                <tr>
+                    <th scope="col">Column A</th>
+                    <th scope="col">Column B</th>
+                    <th scope="col" class="numeric">Column C</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- Duplicate / edit rows as needed -->
+                <tr>
+                    <td>Sample Item</td>
+                    <td>Short description or details.</td>
+                    <td class="numeric">42</td>
+                    <td><span class="badge">Active</span></td>
+                </tr>
+                <tr>
+                    <td>Another Item</td>
+                    <td>Additional context goes here.</td>
+                    <td class="numeric">108</td>
+                    <td><span class="badge">Pending</span></td>
+                </tr>
+                <tr>
+                    <td>Placeholder</td>
+                    <td>Feel free to remove or extend rows.</td>
+                    <td class="numeric">3</td>
+                    <td><span class="badge">Archived</span></td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="2">Total</td>
+                    <td class="numeric">153</td>
+                    <td>Last updated: <!-- add date --> 2025-10-07</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>
