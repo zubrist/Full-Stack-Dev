@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reusable Form Template</title>
+  <!--
+    Reusable, exam-friendly form template
+    - Single HTML file with INTERNAL CSS only (no external deps)
+    - Minimal, clean, easy to adapt quickly under time constraints
+    - Accessible (labels, required markers, focus states)
+
+    HOW TO USE:
+    1) Duplicate this file and rename as needed.
+    2) Edit the tokens in :root to restyle (colors, spacing, width).
+    3) Remove fields you don't need; duplicate blocks to add more.
+    4) Keep label 'for' attributes in sync with input 'id'.
+  -->
+  <style>
+    :root {
+      /* Quick style tokens: tweak to match the exam brief */
+      --bg: #f7f7f8;
+      --card-bg: #ffffff;
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --accent: #2563eb;          /* primary accent */
+      --accent-weak: #e5edff;     /* light accent background */
+      --border: #e5e7eb;
+      --error: #b91c1c;
+      --radius: 10px;
+      --gap: 12px;
+      --field-h: 42px;
+      --max-w: 720px;             /* form width */
+      --font: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    /* Page base */
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; padding: 24px; font-family: var(--font);
+      background: var(--bg); color: var(--ink);
+      display: grid; place-items: center; /* center the card */
+    }
+
+    /* Card wrapper */
+    .form-card {
+      width: 100%; max-width: var(--max-w);
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .header {
+      padding: 18px 18px 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .title { margin: 0; font-size: 1.25rem; }
+    .subtitle { margin: 4px 0 0; color: var(--muted); font-size: .95rem; }
+
+    /* Form content */
+    form { padding: 18px; }
+    .grid {
+      display: grid; gap: var(--gap);
+      grid-template-columns: 1fr 1fr; /* two columns by default */
+    }
+    /* stack to one column on small screens */
+    @media (max-width: 640px) { .grid { grid-template-columns: 1fr; } }
+
+    /* Field block */
+    .field { display: grid; gap: 6px; }
+    .field.full { grid-column: 1 / -1; } /* span both columns */
+
+    label { font-weight: 600; }
+    .req { color: var(--error); margin-left: 2px; }
+    .hint { color: var(--muted); font-size: .9rem; }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      min-height: var(--field-h);
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--ink);
+      font: inherit;
+      outline: none;
+      transition: border-color .15s ease, box-shadow .15s ease;
+    }
+    textarea { min-height: 120px; resize: vertical; }
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-weak);
+    }
+
+    /* Inline groups for radios/checkboxes */
+    .inline { display: flex; flex-wrap: wrap; gap: 12px 16px; align-items: center; }
+    .choice { display: inline-flex; align-items: center; gap: 8px; }
+
+    /* Actions */
+    .actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 4px; }
+    .btn {
+      border: 1px solid var(--border);
+      background: #fff; color: var(--ink);
+      padding: 10px 14px; border-radius: 8px; cursor: pointer; font: inherit;
+      transition: background .15s ease, border-color .15s ease, transform .05s ease;
+    }
+    .btn:hover { background: #f8fafc; }
+    .btn:active { transform: translateY(1px); }
+    .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    .btn.primary:hover { filter: brightness(1.05); }
+
+    /* Footer (fine print) */
+    .footer { padding: 12px 18px 18px; color: var(--muted); font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <div class="form-card" role="region" aria-labelledby="form-title">
+    <header class="header">
+      <h1 id="form-title" class="title">Generic Form</h1>
+      <p class="subtitle">Use this boilerplate for any exam form—add, remove, or rename fields quickly.</p>
+    </header>
+
+    <!--
+      ACTION & METHOD: Change as required by the question.
+      method="get" is fine for search/filter; use method="post" for data submission.
+    -->
+    <form action="#" method="post" novalidate>
+      <div class="grid">
+        <!-- Text fields -->
+        <div class="field">
+          <label for="firstName">First Name <span class="req" aria-hidden="true">*</span></label>
+          <input type="text" id="firstName" name="firstName" placeholder="Enter first name" required>
+        </div>
+
+        <div class="field">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" placeholder="Enter last name">
+        </div>
+
+        <div class="field">
+          <label for="email">Email <span class="req" aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" placeholder="name@example.com" required>
+        </div>
+
+        <div class="field">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="e.g. 9876543210" pattern="[0-9]{10}">
+          <small class="hint">Digits only, 10 characters</small>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" minlength="8" placeholder="At least 8 characters">
+        </div>
+
+        <div class="field">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob">
+        </div>
+
+        <!-- Select -->
+        <div class="field">
+          <label for="role">Role</label>
+          <select id="role" name="role">
+            <option value="">Select…</option>
+            <option>Student</option>
+            <option>Developer</option>
+            <option>Designer</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <!-- Number -->
+        <div class="field">
+          <label for="experience">Experience (years)</label>
+          <input type="number" id="experience" name="experience" min="0" max="50" step="1" placeholder="0">
+        </div>
+
+        <!-- Radio group (inline) -->
+        <fieldset class="field full" aria-labelledby="gender-legend">
+          <legend id="gender-legend">Gender</legend>
+          <div class="inline">
+            <label class="choice"><input type="radio" name="gender" value="male"> Male</label>
+            <label class="choice"><input type="radio" name="gender" value="female"> Female</label>
+            <label class="choice"><input type="radio" name="gender" value="other"> Other</label>
+          </div>
+        </fieldset>
+
+        <!-- Checkbox group (inline) -->
+        <fieldset class="field full" aria-labelledby="skills-legend">
+          <legend id="skills-legend">Skills</legend>
+          <div class="inline">
+            <label class="choice"><input type="checkbox" name="skills" value="html"> HTML</label>
+            <label class="choice"><input type="checkbox" name="skills" value="css"> CSS</label>
+            <label class="choice"><input type="checkbox" name="skills" value="js"> JavaScript</label>
+            <label class="choice"><input type="checkbox" name="skills" value="python"> Python</label>
+          </div>
+        </fieldset>
+
+        <!-- Textarea -->
+        <div class="field full">
+          <label for="about">About You</label>
+          <textarea id="about" name="about" placeholder="Write a short description…"></textarea>
+        </div>
+
+        <!-- File input (optional); remove if not needed -->
+        <div class="field full">
+          <label for="resume">Upload File</label>
+          <input type="file" id="resume" name="resume" />
+        </div>
+
+        <!-- Hidden field example -->
+        <input type="hidden" name="formId" value="generic-001">
+      </div>
+
+      <div class="actions">
+        <button type="reset" class="btn">Reset</button>
+        <button type="submit" class="btn primary">Submit</button>
+      </div>
+    </form>
+
+    <div class="footer">
+      <p>
+        Tips: Mark required fields with <span aria-hidden="true" class="req">*</span>. Use
+        <code>.full</code> on <code>.field</code> to span both columns. Adjust
+        the grid in CSS for one/two column layouts.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
