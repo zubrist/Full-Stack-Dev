@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(248, 248, 237);
+        }
+
+        h1 {
+            color: yellowgreen;
+            margin: 20px;
+            padding: 10px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        marquee {
+            color: rgba(66, 6, 16, 0.704);
+            font-size: 20px;
+        }
+
+        .information {
+            font-size: 20px;
+            margin: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: rgb(54, 39, 39);
+        }
+
+        .picture {
+            /* display: block;
+            justify-content: center;
+            align-items: center; */
+            display: grid;
+            place-items: center;
+        }
+
+        img {
+            height: 500px;
+            width: 600px;
+            max-width: 400px;
+            /* margin: 20px; */
+        }
+
+        .stream {
+            margin: 22px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            font-size: 20PX;
+        }
+        
+        .stream ol {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+        
+        .stream-section {
+            flex: 1;
+        }
+
+        h3 {
+            text-align: center;
+            margin: 10px;
+            color: coral;
+            font-size: 25PX;
+        }
+        h2{
+            text-align: center;
+            background-color: aqua;
+            margin-bottom: 20px;
+        }
+        a{
+            color: brown;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+            text-decoration-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>XYZ College</h1>
+    <marquee behavior="scroll" direction="right" scrollamount="25">Office Hours: 12pm to 4pm</marquee>
+    <p class="information information1">College is an important phase in a student’s life where higher education
+        begins.It provides opportunities to explore different subjects, develop skills, and build a
+        strong foundation for the future. In college, students learn through lectures, practical
+        classes, seminars, and various activities. The environment encourages independence, creativity, and critical
+        thinking. Teachers guide students not only in academics but also in personal development.
+        Colleges also offer libraries, laboratories, sports facilities, and cultural programs to
+        support overall growth. It is a place where students make new friends, discover their
+        \interests, and prepare for their careers. Overall, college plays a vital role in shaping
+        a student’s personality and future.</p>
+    <p class="information information2">A college is an institution that provides higher learning after school
+        education. It helps students gain advanced knowledge in their chosen fields such as science,
+        arts, commerce, or technology. College life teaches discipline, time management, and responsibility.
+        Students participate in workshops, projects, and group activities that improve their communication
+        and leadership skills. The campus atmosphere is lively, filled with events, festivals, and competitions
+        that encourage talent and creativity. Colleges often have experienced professors who guide students toward
+        academic success. Apart from studies, colleges help students prepare for future jobs through training and
+        placements. Thus, college is not only a place of learning but also a journey of personal and professional
+        growth.</p>
+    <div class="picture">
+        <img src="https://images.unsplash.com/photo-1562774053-701939374585?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3
+        fDB8MHxzZWFyY2h8Mnx8Y29sbGVnZXxlbnwwfHwwfHx8MA%3D%3D" alt="image of college">
+    </div>
+    <h3>Stream & subject</h3>
+    <div class="stream">
+        <ol>
+            <li class="stream-section">
+                <strong style="padding: 10px; color: cadetblue; font-weight: 1000; display: block;">Arts Stream</strong>
+                <ul>
+                    <li>Biochemistry</li>
+                    <li>Botany</li>
+                    <li>Chemistry</li>
+                    <li>Computer Science</li>
+                    <li>Economics</li>
+                    <li>Food & Nutrition</li>
+                    <li>Geography</li>
+                    <li>Mathematics</li>
+                    <li>Physics</li>
+                    <li>Physiology</li>
+                    <li>Psychology</li>
+                    <li>Zoology</li>
+                </ul>
+            </li>
+            <li class="stream-section">
+                <strong style="padding: 10px; color: cadetblue; font-weight: 1000; display: block;">Science Stream</strong>
+                <ul>
+                    <li>Bengali</li>
+                    <li>English</li>
+                    <li>Hindi</li>
+                    <li>History</li>
+                    <li>Journalism & Mass Communication</li>
+                    <li>Philosophy</li>
+                    <li>Political Science</li>
+                    <li>Sanskrit</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+    <h2>Affiliated <a href="https://www.caluniv.ac.in/">UNIVERSITY OF CALCUTTA</a></h2>
+</body>
+
+</html>
