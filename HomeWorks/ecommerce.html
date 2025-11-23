@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SmartKart - Home & Electronics</title>
+<style>
+  :root {
+    --blue:#2874f0;          /* Flipkart primary */
+    --yellow:#ffc200;        /* Accent */
+    --bg:#f1f3f6;            /* Page background */
+    --card:#fff;             /* Card background */
+    --border:#e0e0e0;
+    --danger:#d32f2f;
+    --radius:12px;
+    --shadow:0 4px 12px rgba(0,0,0,.08);
+    --font: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:var(--font); background:var(--bg); color:#1f1f1f; }
+  header { background:var(--blue); color:#fff; padding:14px 24px; display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  header h1 { margin:0; font-size:1.4rem; letter-spacing:.5px; }
+  header .tagline { font-size:.75rem; opacity:.85; }
+  .search { flex:1; display:flex; }
+  .search input { width:100%; padding:10px 12px; border:none; border-radius:8px; outline:none; }
+  .nav-btn { background:var(--yellow); color:#222; border:none; padding:10px 16px; font-weight:600; border-radius:8px; cursor:pointer; }
+  .nav-btn:hover { filter:brightness(1.05); }
+
+  main { max-width:1280px; margin:0 auto; padding:26px 20px 60px; }
+  .layout { display:grid; grid-template-columns: 1fr 310px; gap:28px; }
+  @media (max-width:1000px){ .layout { grid-template-columns:1fr; } }
+
+  /* Product grid */
+  .products { display:grid; gap:18px; grid-template-columns: repeat(auto-fill, minmax(230px,1fr)); }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); display:flex; flex-direction:column; overflow:hidden; position:relative; }
+  .card img { width:100%; aspect-ratio:4/3; object-fit:cover; background:#fafafa; }
+  .card .info { padding:12px 14px 16px; flex:1; display:flex; flex-direction:column; }
+  .card h3 { margin:0 0 6px; font-size:1rem; font-weight:600; line-height:1.2; }
+  .desc { font-size:.75rem; color:#555; margin:0 0 10px; flex:0; }
+  .price-row { margin-top:auto; display:flex; align-items:center; gap:8px; }
+  .price { font-weight:700; color:#111; }
+  .mrp { font-size:.7rem; text-decoration:line-through; color:#777; }
+  .cta { display:flex; gap:8px; margin-top:12px; }
+  .btn { flex:1; padding:9px 10px; border-radius:8px; font-size:.75rem; font-weight:600; cursor:pointer; border:1px solid var(--blue); background:var(--blue); color:#fff; }
+  .btn.alt { background:#fff; color:var(--blue); }
+  .btn.alt:hover { background:var(--yellow); color:#222; border-color:var(--yellow); }
+  .btn:hover { filter:brightness(1.1); }
+  .badge { position:absolute; top:8px; left:8px; background:var(--yellow); color:#222; padding:4px 8px; font-size:.65rem; font-weight:700; border-radius:50px; }
+
+  /* Cart */
+  aside.cart { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); padding:18px 18px 22px; display:flex; flex-direction:column; min-height:300px; }
+  .cart h2 { margin:0 0 14px; font-size:1.05rem; }
+  .cart-list { list-style:none; margin:0 0 12px; padding:0; display:flex; flex-direction:column; gap:10px; }
+  .cart-item { display:flex; justify-content:space-between; align-items:center; font-size:.78rem; background:#f8fafc; padding:8px 10px; border-radius:8px; }
+  .remove { background:none; border:none; color:var(--danger); cursor:pointer; font-size:.8rem; font-weight:600; }
+  .total { font-weight:700; margin-top:auto; display:flex; justify-content:space-between; padding-top:12px; border-top:1px solid var(--border); }
+  .checkout { margin-top:16px; background:linear-gradient(90deg,var(--blue),#1b5fc4); color:#fff; padding:12px; border:none; font-weight:700; border-radius:10px; cursor:pointer; }
+  .checkout:hover { filter:brightness(1.08); }
+  .empty-note { font-size:.7rem; color:#666; }
+
+  /* Minimal responsiveness tweaks */
+  @media (max-width:600px){ header { flex-direction:column; align-items:flex-start; } .search { width:100%; } }
+</style>
+</head>
+<body>
+  <header>
+    <h1>SmartKart</h1>
+    <div class="tagline">Everyday Indian Home & Electronics</div>
+    <div class="search"><input type="text" placeholder="Search mixer, phone, TV..." aria-label="Search" /></div>
+    <button class="nav-btn" type="button">Login</button>
+  </header>
+  <main>
+    <div class="layout">
+      <!-- Product Listing -->
+      <section aria-label="Products" class="products">
+        <!-- Card examples (replace placeholder images as needed) -->
+        <article class="card">
+          <span class="badge">BEST SELLER</span>
+          <img src="https://via.placeholder.com/300x225?text=Mixer+Grinder" alt="Mixer Grinder" loading="lazy" />
+          <div class="info">
+            <h3>Mixer Grinder 750W</h3>
+            <p class="desc">3 jars • Copper motor • 2 year warranty</p>
+            <div class="price-row"><span class="price">₹2,799</span><span class="mrp">₹3,499</span></div>
+            <div class="cta"><button class="btn alt" type="button">Add to Cart</button><button class="btn" type="button">Buy Now</button></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://via.placeholder.com/300x225?text=Pressure+Cooker" alt="Aluminium pressure cooker" loading="lazy" />
+          <div class="info">
+            <h3>Pressure Cooker 5L</h3>
+            <p class="desc">IS certified safety valve</p>
+            <div class="price-row"><span class="price">₹1,199</span><span class="mrp">₹1,499</span></div>
+            <div class="cta"><button class="btn alt" type="button">Add to Cart</button><button class="btn" type="button">Buy Now</button></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://via.placeholder.com/300x225?text=LED+Smart+TV" alt="43 inch LED Smart TV" loading="lazy" />
+          <div class="info">
+            <h3>43" LED Smart TV</h3>
+            <p class="desc">Full HD • OTT Apps • 3 HDMI</p>
+            <div class="price-row"><span class="price">₹21,990</span><span class="mrp">₹27,990</span></div>
+            <div class="cta"><button class="btn alt" type="button">Add to Cart</button><button class="btn" type="button">Buy Now</button></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://via.placeholder.com/300x225?text=Smartphone" alt="Smartphone" loading="lazy" />
+          <div class="info">
+            <h3>Smartphone 128GB</h3>
+            <p class="desc">AMOLED • 50MP • 5000mAh</p>
+            <div class="price-row"><span class="price">₹18,499</span><span class="mrp">₹22,999</span></div>
+            <div class="cta"><button class="btn alt" type="button">Add to Cart</button><button class="btn" type="button">Buy Now</button></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://via.placeholder.com/300x225?text=Ceiling+Fan" alt="Ceiling fan" loading="lazy" />
+          <div class="info">
+            <h3>Ceiling Fan (BLDC)</h3>
+            <p class="desc">Energy saving • High air delivery</p>
+            <div class="price-row"><span class="price">₹2,499</span><span class="mrp">₹3,299</span></div>
+            <div class="cta"><button class="btn alt" type="button">Add to Cart</button><button class="btn" type="button">Buy Now</button></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://via.placeholder.com/300x225?text=Water+Purifier" alt="Water purifier" loading="lazy" />
+          <div class="info">
+            <h3>RO Water Purifier</h3>
+            <p class="desc">7 Stage • Mineral guard</p>
+            <div class="price-row"><span class="price">₹10,999</span><span class="mrp">₹13,499</span></div>
+            <div class="cta"><button class="btn alt" type="button">Add to Cart</button><button class="btn" type="button">Buy Now</button></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://via.placeholder.com/300x225?text=Electric+Kettle" alt="Electric kettle" loading="lazy" />
+          <div class="info">
+            <h3>Electric Kettle 1.8L</h3>
+            <p class="desc">Auto cut-off • Stainless steel</p>
+            <div class="price-row"><span class="price">₹899</span><span class="mrp">₹1,299</span></div>
+            <div class="cta"><button class="btn alt" type="button">Add to Cart</button><button class="btn" type="button">Buy Now</button></div>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://via.placeholder.com/300x225?text=Induction+Cooktop" alt="Induction cooktop" loading="lazy" />
+          <div class="info">
+            <h3>Induction Cooktop</h3>
+            <p class="desc">Preset menus • Fast heating</p>
+            <div class="price-row"><span class="price">₹1,899</span><span class="mrp">₹2,499</span></div>
+            <div class="cta"><button class="btn alt" type="button">Add to Cart</button><button class="btn" type="button">Buy Now</button></div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Static Cart Summary (non-JS for exam) -->
+      <aside class="cart" aria-label="Shopping Cart">
+        <h2>Your Cart (Sample)</h2>
+        <ul class="cart-list">
+          <li class="cart-item"><span>Mixer Grinder</span><span>₹2,799</span></li>
+          <li class="cart-item"><span>Electric Kettle</span><span>₹899</span></li>
+          <li class="cart-item"><span>Ceiling Fan</span><span>₹2,499</span></li>
+        </ul>
+        <div class="total"><span>Total</span><span>₹6,197</span></div>
+        <button class="checkout" type="button">Proceed to Checkout</button>
+        <p class="empty-note">(In a real page Add to Cart would update this list.)</p>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

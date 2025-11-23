@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Learn Web Development</title>
+<style>
+  :root {
+    --bg1:#0f2027;
+    --bg2:#203a43;
+    --bg3:#2c5364;
+    --text:#f4f7fa;
+    --accent:#ffc107;
+    --accent-hover:#ffd54f;
+    --visited:#ba68c8;
+    --active:#ff7043;
+    --font: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  }
+  * { box-sizing:border-box; }
+  body {
+    margin:0; min-height:100vh; font-family:var(--font); color:var(--text);
+    background:linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3));
+    display:flex; align-items:center; justify-content:center; padding:40px 20px;
+  }
+  main { max-width:780px; width:100%; background:rgba(255,255,255,0.06); backdrop-filter:blur(6px);
+         border:1px solid rgba(255,255,255,0.15); border-radius:20px; padding:48px 42px 54px; }
+  h1 { margin:0 0 18px; font-size:clamp(1.9rem,4vw,2.6rem); letter-spacing:.8px; line-height:1.15; }
+  p { font-size:1rem; line-height:1.6; margin:0 0 22px; }
+  .links { display:flex; flex-wrap:wrap; gap:14px; }
+  a { position:relative; display:inline-block; padding:10px 18px; border-radius:10px; text-decoration:none; font-weight:600; letter-spacing:.4px; transition:.25s ease; }
+  a:link { background:var(--accent); color:#222; }
+  a:visited { background:var(--visited); color:#fff; }
+  a:hover { background:var(--accent-hover); transform:translateY(-4px); box-shadow:0 8px 18px -6px rgba(0,0,0,.45); }
+  a:active { background:var(--active); color:#fff; transform:translateY(0); box-shadow:0 4px 10px -4px rgba(0,0,0,.55); }
+  a:focus-visible { outline:3px solid #fff; outline-offset:3px; }
+  footer { margin-top:36px; font-size:.75rem; opacity:.7; }
+  .note { font-size:.8rem; margin-top:-6px; margin-bottom:26px; opacity:.85; }
+  code { background:#1d2e36; padding:3px 6px; border-radius:6px; font-size:.85rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1><a href="college.html" class="heading-link">Learn Web Development</a></h1>
+  <ul class="states" aria-label="Hyperlink state explanations">
+    <li><code>:link</code> = default style for an unvisited hyperlink.</li>
+    <li><code>:visited</code> = style after the user has already clicked that link.</li>
+    <li><code>:hover</code> = style when the pointer is placed over the link.</li>
+    <li><code>:active</code> = style while the link is being activated (mouse pressed).</li>
+  </ul>
+</main>
+</body>
+</html>

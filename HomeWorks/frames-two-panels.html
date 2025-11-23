@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Two Frames Example</title>
+<style>
+  :root {
+    --left-bg:#ffffff;
+    --right-bg:#fafafa;
+    --border:#2d4a72;
+    --row-hover:#e8f2ff;
+    --header:#23405f;
+    --accent:#ff9800;
+    --text:#1a1a1a;
+    --radius:10px;
+    --font: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:var(--font); background:linear-gradient(120deg,#113349,#1f5680 55%,#1b2f40); color:var(--text); min-height:100vh; display:flex; align-items:center; justify-content:center; padding:36px 20px; }
+  .frame-wrapper { width:min(1100px,100%); display:grid; grid-template-columns:260px 1fr; gap:18px; }
+  @media (max-width:760px){ .frame-wrapper { grid-template-columns:1fr; } }
+
+  /* Left table acting as navigation frame */
+  table { width:100%; border-collapse:collapse; background:var(--left-bg); border:3px solid var(--border); border-radius:var(--radius); overflow:hidden; box-shadow:0 6px 18px -8px rgba(0,0,0,.45); }
+  caption { background:var(--header); color:#fff; padding:14px 16px; font-weight:600; font-size:1.05rem; letter-spacing:.5px; }
+  td { border:1px solid var(--border); padding:14px 16px; font-size:.9rem; font-weight:600; }
+  td a { text-decoration:none; color:var(--header); display:block; }
+  td a:link, td a:visited { color:var(--header); }
+  td a:hover { color:var(--accent); }
+  td a:active { color:#d84315; }
+  tr:hover td { background:var(--row-hover); }
+
+  /* Right content frame */
+  #content-frame { background:var(--right-bg); border:3px solid var(--border); border-radius:var(--radius); padding:26px 28px 40px; box-shadow:0 6px 20px -10px rgba(0,0,0,.5); display:flex; flex-direction:column; }
+  #content-frame h2 { margin:0 0 12px; color:var(--header); font-size:1.4rem; }
+  #content-frame p { line-height:1.55; margin:0 0 14px; font-size:.95rem; }
+  .hint { margin-top:auto; font-size:.7rem; opacity:.65; }
+  .badge { display:inline-block; background:var(--accent); color:#222; font-size:.65rem; padding:4px 8px; border-radius:50px; letter-spacing:.5px; margin-left:6px; }
+</style>
+</head>
+<body>
+  <div class="frame-wrapper" aria-label="Two frames layout">
+    <table aria-label="Navigation links">
+      <caption>Info Menu</caption>
+      <tr><td><a href="#" data-title="About" data-content="<p>This demo mimics a <strong>two-frame</strong> layout without deprecated &lt;frameset&gt;. The left table acts like a navigation frame. Clicking a link swaps content on the right.</p><p>Everything is built using modern semantic HTML, CSS Grid and a tiny bit of JavaScript for content switching.</p>">About</a></td></tr>
+      <tr><td><a href="#" data-title="Department 1" data-content="<p><strong>Department 1</strong> focuses on foundational computer science subjects: Data Structures, Algorithms, Discrete Math and Programming Fundamentals.</p><p>Labs reinforce theory with weekly coding exercises and mini projects.</p>">Department 1</a></td></tr>
+      <tr><td><a href="#" data-title="Department 2" data-content="<p><strong>Department 2</strong> covers applied technology: Web Development, Databases, Cloud Basics and UI/UX principles.</p><p>Students build full stack prototypes integrating front-end, API and persistence layers.</p>">Department 2</a></td></tr>
+      <tr><td><a href="#" data-title="Department 3" data-content="<p><strong>Department 3</strong> emphasizes advanced topics: Machine Learning, Cyber Security, Distributed Systems and DevOps pipelines.</p><p>Capstone projects encourage innovation and research-driven exploration.</p>">Department 3</a></td></tr>
+    </table>
+
+    <section id="content-frame" aria-live="polite">
+      <h2>Content Frame <span class="badge">LIVE</span></h2>
+      <p>This frame would show the contents according to the link clicked by the user on the left frame.</p>
+      <p>Select any item to load its description instantly.</p>
+      <div class="hint">Styled table: custom border thickness/color, hover rows, rounded corners; right frame visually distinct.</div>
+    </section>
+  </div>
+
+<script>
+// Simple content swap without page reload
+const links = document.querySelectorAll('table a');
+const frame = document.getElementById('content-frame');
+links.forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const title = a.dataset.title || 'Details';
+    const html = a.dataset.content || '<p>No content.</p>';
+    frame.innerHTML = `<h2>${title}</h2>${html}<div class='hint'>Click another item to change content.</div>`;
+  });
+});
+</script>
+</body>
+</html>

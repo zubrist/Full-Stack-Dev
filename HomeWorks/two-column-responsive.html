@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Responsive Two Column Layout</title>
+<style>
+  * { box-sizing:border-box; }
+  body {
+    margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    background:#f5f7fa; color:#222; padding:32px 16px; }
+  main { max-width:960px; margin:0 auto; }
+  h1 { margin:0 0 24px; font-size:clamp(1.8rem,4vw,2.4rem); text-align:center; font-weight:600; }
+  .grid { display:grid; gap:20px; grid-template-columns:1fr 1fr; }
+  @media (max-width:780px){ .grid { grid-template-columns:1fr; } }
+  section { background:#fff; padding:24px 24px 28px; border:1px solid #e0e4e8; border-radius:10px; }
+  h2 { margin:0 0 14px; font-size:1.2rem; font-weight:600; }
+  p { margin:0 0 14px; line-height:1.5; font-size:.95rem; }
+  code { background:#eef1f5; padding:2px 5px; border-radius:4px; font-size:.85rem; }
+  .note { font-size:.75rem; color:#555; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Responsive Two Column Layout</h1>
+  <div class="grid" aria-label="Responsive two column content">
+    <section aria-labelledby="col1-title">
+      <h2 id="col1-title">Introduction</h2>
+      <p>This page shows a two-column layout on wider screens and a single column on small screens using one simple media query.</p>
+      <p class="note">Shrink the window below 780px to see the columns stack.</p>
+    </section>
+    <section aria-labelledby="col2-title">
+      <h2 id="col2-title">Implementation</h2>
+      <p>The grid uses <code>grid-template-columns: 1fr 1fr;</code>. A media query sets it to <code>1fr</code> for narrow screens. Panels are plain white with a light border for clarity.</p>
+      <p class="note">Minimal colors and fonts keep focus on structure.</p>
+    </section>
+  </div>
+</main>
+</body>
+</html>

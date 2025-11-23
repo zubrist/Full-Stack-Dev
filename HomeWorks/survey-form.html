@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Simple Survey Form</title>
+<style>
+  /* Minimal, readable internal CSS */
+  :root {
+    --bg:#f6f8fa;
+    --card:#fff;
+    --border:#d0d7de;
+    --accent:#2563eb;
+    --radius:10px;
+    --font: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:24px; font-family:var(--font); background:var(--bg); color:#1f2328; }
+  h1 { margin:0 0 18px; font-size:1.6rem; text-align:center; }
+  form { max-width:620px; margin:0 auto; background:var(--card); border:1px solid var(--border); padding:20px 22px 24px; border-radius:var(--radius); }
+  .group { margin-bottom:16px; }
+  label span.req { color:#dc2626; margin-left:4px; }
+  label.top { display:block; font-weight:600; margin-bottom:6px; }
+  input[type=text], input[type=email], textarea, select { width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:6px; font:inherit; background:#fff; }
+  textarea { min-height:110px; resize:vertical; }
+  fieldset { border:1px solid var(--border); padding:12px 14px 10px; border-radius:8px; margin:0 0 16px; }
+  fieldset legend { font-weight:600; padding:0 6px; }
+  .inline { display:flex; flex-wrap:wrap; gap:10px 18px; }
+  .inline label { display:flex; align-items:center; gap:6px; font-weight:500; }
+  button { background:var(--accent); color:#fff; border:none; padding:12px 20px; font:inherit; font-weight:600; border-radius:8px; cursor:pointer; width:100%; }
+  button:hover { filter:brightness(1.08); }
+  .note { font-size:.8rem; color:#57606a; margin-top:4px; }
+  @media (max-width:520px){ form { padding:18px 16px; } }
+</style>
+</head>
+<body>
+  <h1>Quick Feedback Survey</h1>
+  <!-- Action blank (exam context). Add action="/submit" method="post" if needed -->
+  <form action="" method="post" novalidate>
+    <div class="group">
+      <label for="name" class="top">Name <span class="req" aria-hidden="true">*</span></label>
+      <input type="text" id="name" name="name" required placeholder="Your full name" />
+    </div>
+    <div class="group">
+      <label for="email" class="top">Email <span class="req" aria-hidden="true">*</span></label>
+      <input type="email" id="email" name="email" required placeholder="you@example.com" />
+    </div>
+    <div class="group">
+      <label for="age" class="top">Age</label>
+      <input type="text" id="age" name="age" placeholder="Optional" />
+    </div>
+    <fieldset>
+      <legend>How did you hear about us?</legend>
+      <div class="inline">
+        <label><input type="radio" name="source" value="friend" /> Friend</label>
+        <label><input type="radio" name="source" value="social" /> Social Media</label>
+        <label><input type="radio" name="source" value="search" /> Search Engine</label>
+        <label><input type="radio" name="source" value="other" /> Other</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Topics you are interested in</legend>
+      <div class="inline">
+        <label><input type="checkbox" name="topics" value="html" /> HTML</label>
+        <label><input type="checkbox" name="topics" value="css" /> CSS</label>
+        <label><input type="checkbox" name="topics" value="js" /> JavaScript</label>
+        <label><input type="checkbox" name="topics" value="python" /> Python</label>
+      </div>
+    </fieldset>
+    <div class="group">
+      <label for="rating" class="top">Overall Experience</label>
+      <select id="rating" name="rating">
+        <option value="">Select...</option>
+        <option value="excellent">Excellent</option>
+        <option value="good">Good</option>
+        <option value="average">Average</option>
+        <option value="poor">Poor</option>
+      </select>
+    </div>
+    <div class="group">
+      <label for="comments" class="top">Additional Comments</label>
+      <textarea id="comments" name="comments" placeholder="Share your thoughts..."></textarea>
+      <div class="note">Keep feedback concise (exam examples).</div>
+    </div>
+    <button type="submit">Submit Survey</button>
+  </form>
+</body>
+</html>

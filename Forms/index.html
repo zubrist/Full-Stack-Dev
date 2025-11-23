@@ -84,6 +84,22 @@
             border: 1px solid #332;
             background-color: #c6ebcf;
         }
+        /* Mobile adjustments for profile photo input and submit button */
+        @media (max-width: 520px) {
+            label[for="profile-photo"] {
+                font-size: 16px;
+                margin-bottom: 6px;
+            }
+            input[type="file"] {
+                width: 100%;
+                padding: 12px;
+                font-size: 14px;
+            }
+            button {
+                width: 100%;
+                margin: 24px 0 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -150,10 +166,11 @@
         </select>
     </label>
 
-    <!-- upoloading profile photo -->
+    <!-- uploading profile photo -->
     <label for="profile-photo">Profile Photo:
         <input type="file" name="profile-photo" id="profile-photo" accept="image/*">
-    <button>Sumbit</button>
+    </label>
+    <button type="submit">Submit</button>
 
     </form>
 
